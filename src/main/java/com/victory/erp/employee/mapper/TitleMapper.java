@@ -1,10 +1,10 @@
-package com.victory.erp.employee.repository;
+package com.victory.erp.employee.mapper;
 
 import com.victory.erp.employee.domain.Titles;
 import org.apache.ibatis.annotations.*;
 
 @Mapper
-public interface ITitleRepository {
+public interface TitleMapper {
 
     @Select("Select * from Tieles Where titleCode = #{titleCode}")
     public Titles findByTitleCode(@Param("titleCode") String titleCode);
