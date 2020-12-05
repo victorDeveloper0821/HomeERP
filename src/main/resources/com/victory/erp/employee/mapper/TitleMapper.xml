@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.victory.erp.employee.mapper.TitleMapper">
+    <resultMap id="titleMap" type="com.victory.erp.employee.domain.Title">
+        <id property="t_id" column="Tid"/>
+        <result column="code" property="code"/>
+        <result column="name" property="name"/>
+        <result column="level" property="level"/>
+    </resultMap>
+
+    <select id="findByEmpTitle" parameterType="Integer" resultMap="titleMap">
+        Select * from Titles Where t_id = #{Tid};
+    </select>
+
+    <select id="findByTitleCode" parameterType="string" resultMap="titleMap">
+        Select * from Titles Where code = #{code};
+    </select>
+</mapper>

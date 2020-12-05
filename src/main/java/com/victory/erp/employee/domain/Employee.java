@@ -12,9 +12,20 @@ public class Employee {
 
     private String empName;
 
-    private Integer empTitle;
+    private Title empTitle;
 
     private String userId ;
 
     private String password;
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "empId='" + empId + '\'' +
+                ", empName='" + empName + '\'' +
+                ", empTitle=" + empTitle +
+                ", userId='" + userId + '\'' +
+                ", password='" + password + '\'' +
+                '}';
+    }
 }
