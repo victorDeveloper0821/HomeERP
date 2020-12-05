@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.victory.erp.employee.mapper.EmployeeMapper">
+    <resultMap id="employeeFullMap" type="com.victory.erp.employee.domain.Employee">
+        <id property="empId" column="empId"/>
+        <result property="empName" column="empName"/>
+        <result property="userId" column="userId"/>
+        <result property="password" column="password"/>
+        <association property="empTitle"
+                     select="com.victory.erp.employee.mapper.TitleMapper.findByEmpTitle"
+        column="empTitle">
+
+        </association>
+
+    </resultMap>
+
+    <select id="findEmployeeByUserId" parameterType="string" resultMap="employeeFullMap">
+        select * from Employee e where userId = #{userId}
+    </select>
+
+    <select id="findEmployeeByEmpId" parameterType="string" resultMap="employeeFullMap">
+        select * from Employee e where empId = #{empId}
+    </select>
+
+    <insert id="InsertEmployee" parameterType="com.victory.erp.employee.domain.Employee">
+        INSERT INTO Employee (empId, empName, empTitle, userId, password) VALUES(#{empId}, #{empName}, #{empTitle.empTitle}, #{userId}, #{password});
+    </insert>
+
+    <update id="updateEmployee" parameterType="com.victory.erp.employee.domain.Employee">
+        UPDATE Employee SET empTitle=#{empTitle.empTitle}, password=#{password} WHERE empId=#{empId};
+    </update>
+
+</mapper>
