@@ -6,9 +6,9 @@
         <result property="empName" column="empName"/>
         <result property="userId" column="userId"/>
         <result property="password" column="password"/>
-        <association property="empTitle"
+        <association property="Tid"
                      select="com.victory.erp.employee.mapper.TitleMapper.findByEmpTitle"
-        column="empTitle">
+        column="Tid">
 
         </association>
 
@@ -22,8 +22,8 @@
         select * from Employee e where empId = #{empId}
     </select>
 
-    <insert id="InsertEmployee" parameterType="com.victory.erp.employee.domain.Employee">
-        INSERT INTO Employee (empId, empName, empTitle, userId, password) VALUES(#{empId}, #{empName}, #{empTitle.empTitle}, #{userId}, #{password});
+    <insert id="InsertEmployee">
+        INSERT INTO Employee (empId, empName, Tid, userId, password) VALUES(#{empId}, #{empName}, #{Tid.Tid}, #{userId}, #{password});
     </insert>
 
     <update id="updateEmployee" parameterType="com.victory.erp.employee.domain.Employee">

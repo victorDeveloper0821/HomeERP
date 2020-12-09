@@ -11,9 +11,8 @@ public interface TitleMapper {
 
     public Title findByEmpTitle(@Param("empTitle") Integer empTitle);
 
+    public int insertTitles(Title title);
 /*
-    @Insert("Insert Titles (empTitle,titleCode,titleName,level) into (#{empTitle},#{titleCode},#{titleName},#{level})")
-    public int insertTitles(Titles titles);
     @Update("Update Titles set titleCode = #{titleCode},titleName = #{titleName},level = #{level} Where empTitle = #{empTitle}")
     public void updateTitle(Titles titles);
 

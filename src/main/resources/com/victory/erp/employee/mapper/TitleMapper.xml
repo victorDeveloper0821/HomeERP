@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.victory.erp.employee.mapper.TitleMapper">
     <resultMap id="titleMap" type="com.victory.erp.employee.domain.Title">
-        <id property="t_id" column="Tid"/>
+        <id property="Tid" column="t_id"/>
         <result column="code" property="code"/>
         <result column="name" property="name"/>
         <result column="level" property="level"/>
@@ -15,4 +15,9 @@
     <select id="findByTitleCode" parameterType="string" resultMap="titleMap">
         Select * from Titles Where code = #{code};
     </select>
+
+    <insert id="insertTitles">
+        Insert Titles (empTitle,titleCode,titleName,level)
+        into (#{empTitle},#{titleCode},#{titleName},#{level})
+    </insert>
 </mapper>

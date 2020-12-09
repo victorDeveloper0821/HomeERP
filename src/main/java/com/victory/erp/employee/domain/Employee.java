@@ -12,7 +12,7 @@ public class Employee {
 
     private String empName;
 
-    private Title empTitle;
+    private Title Tid;
 
     private String userId ;
 
@@ -23,7 +23,7 @@ public class Employee {
         return "Employee{" +
                 "empId='" + empId + '\'' +
                 ", empName='" + empName + '\'' +
-                ", empTitle=" + empTitle +
+                ", empTitle=" + Tid +
                 ", userId='" + userId + '\'' +
                 ", password='" + password + '\'' +
                 '}';
