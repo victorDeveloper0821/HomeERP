@@ -38,14 +38,14 @@ public class MapperTest {
     public void InsertEmployee(){
         Title title = tmapper.findByEmpTitle(1770);
         Employee insertedEmployee = new Employee();
-        insertedEmployee.setUserId("testaaaa");
-        insertedEmployee.setPassword("alfkfv,ss");
-        insertedEmployee.setEmpId("ajfkrle");
+        insertedEmployee.setUserId("testaabc");
+        insertedEmployee.setPassword("kdiuiajd");
+        insertedEmployee.setEmpId("kdiuijd");
         insertedEmployee.setTid(title);
-        insertedEmployee.setEmpName("測試人員");
+        insertedEmployee.setEmpName("randomInsert");
 
-        mapper.InsertEmployee(insertedEmployee);
-//        assertThat(retVal).isEqualTo(1);
-        assertThat(mapper.findEmployeeByUserId("testaaaa")).isNotNull();
+        int retval = mapper.InsertEmployee(insertedEmployee);
+        System.out.println("retval : "+retval);
+        assertThat(mapper.findEmployeeByUserId("testaabc")).isNotNull();
     }
 }

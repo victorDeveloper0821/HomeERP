@@ -9,7 +9,7 @@ public interface TitleMapper {
 
     public Title findByTitleCode(@Param("code") String titleCode);
 
-    public Title findByEmpTitle(@Param("empTitle") Integer empTitle);
+    public Title findByEmpTitle(@Param("Tid") Integer empTitle);
 
     public int insertTitles(Title title);
 /*

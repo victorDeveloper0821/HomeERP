@@ -16,7 +16,7 @@ public interface EmployeeMapper {
     public Employee findEmployeeByEmpId(@Param("empId") String empId);
 
 
-    public void InsertEmployee(Employee employee);
+    public int InsertEmployee(Employee employee);
 
 //    public void deleteById(@Param("empId") String empId);
 //
