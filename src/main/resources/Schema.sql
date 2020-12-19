@@ -13,8 +13,8 @@ drop table if exists Titles;
 
 CREATE TABLE Titles (
   `t_id` int NOT NULL,
-  `titleCode` varchar(5) NOT NULL,
-  `titleName` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `code` varchar(5) NOT NULL,
+  `name` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `level` int DEFAULT NULL,
-  PRIMARY KEY (`empTitle`)
+  PRIMARY KEY (`t_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
