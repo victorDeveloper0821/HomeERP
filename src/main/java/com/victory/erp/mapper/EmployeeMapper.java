@@ -1,9 +1,7 @@
-package com.victory.erp.employee.mapper;
+package com.victory.erp.mapper;
 
-import com.victory.erp.employee.domain.Employee;
+import com.victory.erp.domain.Employee;
 import org.apache.ibatis.annotations.*;
-
-import java.util.List;
 
 @Mapper
 public interface EmployeeMapper {

@@ -1,4 +1,4 @@
-package com.victory.erp.employee.domain;
+package com.victory.erp.domain;
 
 import lombok.Getter;
 import lombok.Setter;

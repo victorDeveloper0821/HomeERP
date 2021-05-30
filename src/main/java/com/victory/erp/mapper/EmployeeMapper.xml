@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.victory.erp.employee.mapper.EmployeeMapper">
-    <resultMap id="employeeFullMap" type="com.victory.erp.employee.domain.Employee">
+<mapper namespace="com.victory.erp.mapper.EmployeeMapper">
+    <resultMap id="employeeFullMap" type="com.victory.erp.domain.Employee">
         <id property="empId" column="empId"/>
         <result property="empName" column="empName"/>
         <result property="userId" column="userId"/>
         <result property="password" column="password"/>
         <association property="Tid"
-                     select="com.victory.erp.employee.mapper.TitleMapper.findByEmpTitle"
+                     select="com.victory.erp.mapper.TitleMapper.findByEmpTitle"
         column="Tid">
 
         </association>
@@ -26,7 +26,7 @@
         INSERT INTO Employee (empId, empName, Tid, userId, password) VALUES(#{empId}, #{empName}, #{Tid.Tid}, #{userId}, #{password});
     </insert>
 
-    <update id="updateEmployee" parameterType="com.victory.erp.employee.domain.Employee">
+    <update id="updateEmployee" parameterType="com.victory.erp.domain.Employee">
         UPDATE Employee SET empTitle=#{empTitle.empTitle}, password=#{password} WHERE empId=#{empId};
     </update>
 

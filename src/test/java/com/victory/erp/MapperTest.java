@@ -1,9 +1,9 @@
 package com.victory.erp;
 
-import com.victory.erp.employee.domain.Employee;
-import com.victory.erp.employee.domain.Title;
-import com.victory.erp.employee.mapper.EmployeeMapper;
-import com.victory.erp.employee.mapper.TitleMapper;
+import com.victory.erp.domain.Employee;
+import com.victory.erp.domain.Title;
+import com.victory.erp.mapper.EmployeeMapper;
+import com.victory.erp.mapper.TitleMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mybatis.spring.boot.test.autoconfigure.MybatisTest;
@@ -13,7 +13,6 @@ import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.in;
 
 @RunWith(SpringRunner.class)
 @MybatisTest

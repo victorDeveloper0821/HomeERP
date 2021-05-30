@@ -1,6 +1,6 @@
-package com.victory.erp.employee.mapper;
+package com.victory.erp.mapper;
 
-import com.victory.erp.employee.domain.Title;
+import com.victory.erp.domain.Title;
 import org.apache.ibatis.annotations.*;
 
 @Mapper
